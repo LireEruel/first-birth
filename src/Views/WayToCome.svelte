@@ -1,6 +1,6 @@
 <div>
+  <h2>오시는 길</h2>
   <div class="map-warrap">
-    <h2>오시는 길</h2>
     <div id="map" style="width:500px;height:400px;" />
   </div>
   <script>
@@ -38,6 +38,8 @@
   .map-warrap {
     display: flex;
     justify-content: center;
-    padding: 5%;
+  }
+  h2 {
+    margin-top: 5vh;
   }
 </style>

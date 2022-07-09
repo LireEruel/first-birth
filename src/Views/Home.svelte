@@ -1,7 +1,7 @@
 <script>
   import Baby from "./Baby.svelte";
   import Invitation from "./Invitation.svelte";
-
+  import Message from "./Message.svelte";
   import Photo from "./Photo.svelte";
   import { scrollTo, scrollRef, scrollTop } from "svelte-scrolling";
 </script>
@@ -27,7 +27,11 @@
       href="#invitation"
       class="navi">Photo</a
     >
-    <a class="navi">Message</a>
+    <a
+      use:scrollTo={{ ref: "message", duration: 1500 }}
+      href="#invitation"
+      class="navi">Message</a
+    >
   </nav>
   <section class="section-baby" use:scrollRef={"baby"}>
     <Baby />
@@ -37,6 +41,9 @@
   </section>
   <section use:scrollRef={"photo"}>
     <Photo />
+  </section>
+  <section use:scrollRef={"message"}>
+    <Message />
   </section>
 </div>
 
