@@ -57,7 +57,6 @@
     width: 67%;
     margin: auto;
     padding-top: 2%;
-    font-family: "Noto Serif KR";
     margin-bottom: 3%;
   }
   .profile-wrap {
@@ -66,7 +65,7 @@
     justify-content: center;
   }
   .profile-text {
-    margin-left: 3%;
+    margin-left: 10%;
     text-align: start;
   }
 </style>

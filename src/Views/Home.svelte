@@ -1,7 +1,8 @@
 <script>
   import Baby from "./Baby.svelte";
   import Invitation from "./Invitation.svelte";
-  import WayToCome from "./WayToCome.svelte";
+
+  import Photo from "./Photo.svelte";
   import { scrollTo, scrollRef, scrollTop } from "svelte-scrolling";
 </script>
 
@@ -21,8 +22,12 @@
       href="#invitation"
       class="navi">invitation</a
     >
+    <a
+      use:scrollTo={{ ref: "photo", duration: 1500 }}
+      href="#invitation"
+      class="navi">Photo</a
+    >
     <a class="navi">Message</a>
-    <a class="navi">Photo</a>
   </nav>
   <section class="section-baby" use:scrollRef={"baby"}>
     <Baby />
@@ -30,7 +35,9 @@
   <section use:scrollRef={"invitation"} class="section-invitation">
     <Invitation />
   </section>
-  <WayToCome />
+  <section use:scrollRef={"photo"}>
+    <Photo />
+  </section>
 </div>
 
 <style>
@@ -43,12 +50,16 @@
     font-family: meat_buckets;
     src: url(../assets/meat_buckets.ttf);
   }
-
+  @font-face {
+    font-family: noto_serif_kr;
+    src: url(../assets/NotoSerifKR.otf);
+  }
   .root {
     margin: 0;
     width: 100%;
     height: 100%;
     transition: all 0.3s ease;
+    font-family: "noto_serif_kr";
   }
 
   #top_view {
@@ -86,6 +97,7 @@
     position: sticky;
     top: 0;
     background-color: #e8c599;
+    z-index: 999;
   }
   .section-baby {
     background-color: #fffbe8;
