@@ -14,6 +14,7 @@
     "vite": "^2.9.9"
   },
   "dependencies": {
+    "svelte-navigator": "^3.1.6",
     "svelte-scrolling": "^1.2.1"
   }
 }

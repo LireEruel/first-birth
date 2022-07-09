@@ -1,19 +1,29 @@
 <script>
   import profile from "../assets/profile.jpg";
+  import cafe from "../assets/cafe_img.png";
   import { scrollTo, scrollRef, scrollTop } from "svelte-scrolling";
 </script>
 
 <div class="root">
-  <div id="top_view">
+  <div id="top_view" use:scrollRef={"main"}>
     <h1 class="title">sin ri hyeon birthday</h1>
-    <nav class="navigation">
-      <a use:scrollTo={"main"} class="navi">Home</a>
-      <a href="#invitation" class="navi">Invitation</a>
-      <a class="navi">Message</a>
-      <a class="navi">Photo</a>
-    </nav>
   </div>
-  <section use:scrollRef={"main"}>
+  <nav class="navigation">
+    <a use:scrollTo={{ ref: "main", duration: 1500 }} href="main" class="navi"
+      >Home</a
+    >
+    <a use:scrollTo={{ ref: "baby", duration: 1500 }} href="#baby" class="navi"
+      >baby</a
+    >
+    <a
+      use:scrollTo={{ ref: "invitation", duration: 1500 }}
+      href="#invitation"
+      class="navi">invitation</a
+    >
+    <a class="navi">Message</a>
+    <a class="navi">Photo</a>
+  </nav>
+  <section class="section-baby" use:scrollRef={"baby"}>
     <h1 class="name">sin li hyeon</h1>
     <hr />
     <p class="info_text">
@@ -39,21 +49,43 @@
       </div>
     </div>
   </section>
-  <div id="invitation">
-    <h1 class="name">Place</h1>
-    <div class="map-warrap">
-      <div id="map" style="width:500px;height:400px;" />
+  <section use:scrollRef={"invitation"} class="section-invitation">
+    <h1 class="name">invitation</h1>
+    <hr />
+    <div class="card">
+      <img src={cafe} alt="카페 이미지" />
+      <div class="card-text">
+        <h3>돌잔치</h3>
+        <p class="card-subtext">동해 뉴동해관광호텔 1F 두다트</p>
+        <p class="card-subtext">2022년 8월 27일, 5:00PM</p>
+      </div>
     </div>
-    <script>
-      var container = document.getElementById("map"); //지도를 담을 영역의 DOM 레퍼런스
-      var options = {
-        //지도를 생성할 때 필요한 기본 옵션
-        center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
-        level: 3, //지도의 레벨(확대, 축소 정도)
-      };
-      var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
-    </script>
-  </div>
+    <div>
+      <div class="map-warrap">
+        <h2>오시는 길</h2>
+        <div id="map" style="width:500px;height:400px;" />
+      </div>
+      <script>
+        var container = document.getElementById("map"); //지도를 담을 영역의 DOM 레퍼런스
+        var options = {
+          //지도를 생성할 때 필요한 기본 옵션
+          center: new kakao.maps.LatLng(37.526581182303026, 129.1031200003175), //지도의 중심좌표.
+          level: 3, //지도의 레벨(확대, 축소 정도)
+        };
+        var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+        var markerPosition = new kakao.maps.LatLng(
+          37.526581182303026,
+          129.1031200003175
+        );
+        var marker = new kakao.maps.Marker({
+          position: markerPosition,
+        });
+
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+      </script>
+    </div>
+  </section>
 </div>
 
 <style>
@@ -72,16 +104,16 @@
     width: 100%;
     height: 100%;
     transition: all 0.3s ease;
-    background-color: #fffbe8;
   }
 
   #top_view {
     background-image: url("../assets/top_image.jpg");
     width: 100%;
-    height: 100%;
+    height: 100vh;
     align-self: center;
     margin: 0;
     background-size: cover;
+    top: 0;
   }
   .root:focus {
     outline: 0;
@@ -105,8 +137,14 @@
     justify-content: center;
     color: whitesmoke;
     font-size: larger;
-    padding-bottom: 25%;
     scroll-behavior: smooth;
+    position: sticky;
+    top: 0;
+    background-color: #e8c599;
+  }
+  .section-baby {
+    background-color: #fffbe8;
+    padding: 5%;
   }
   .navi {
     margin: 1%;
@@ -142,6 +180,7 @@
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 3rem;
     font-weight: bold;
+    margin: 0;
   }
 
   hr {
@@ -154,7 +193,7 @@
     width: 67%;
     margin: auto;
     padding-top: 2%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Noto Serif KR";
     margin-bottom: 3%;
   }
   .profile-wrap {
@@ -174,5 +213,23 @@
     display: flex;
     justify-content: center;
     padding: 5%;
+  }
+  .section-invitation {
+    padding: 5%;
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 5vh;
+  }
+  .card-text {
+    text-align: start;
+    margin-left: 5vw;
+    padding-top: 2ch;
+  }
+  .card-subtext {
+    margin-left: 1vw;
+    color: #6c757d !important;
   }
 </style>
