@@ -60,17 +60,21 @@
       >
     </div>
   </div>
-  <ul>
-    {#each comments as comment, i}
-      <li>{comment.name} : {comment.content}</li>
-    {/each}
-  </ul>
+  <div id="comment-area">
+    <h2>축하메시지</h2>
+    <ul>
+      {#each comments as comment, i}
+        <li>
+          <h4>{comment.name}</h4>
+          <p>{comment.content}</p>
+        </li>{/each}
+    </ul>
+  </div>
 </div>
 
 <style>
   .root {
     padding-top: 10vh;
-    padding-bottom: 10vh;
   }
   .title {
     font-family: Georgia, "Times New Roman", Times, serif;
@@ -89,13 +93,45 @@
     flex-direction: column;
     align-items: center;
   }
-  .input-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 50vh;
-    margin-top: 1vh;
+  @media screen and (max-width: 500px) {
+    .input-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 90%;
+      margin-top: 1vh;
+    }
+    .content-input {
+      padding: 1vh;
+      width: 95%;
+      margin-top: 1vh;
+      min-height: 5vh;
+      border-radius: 1vh;
+      border-color: gray;
+      resize: none;
+    }
   }
+
+  @media screen and (min-width: 501px) {
+    .input-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 50vh;
+      margin-top: 1vh;
+    }
+    .content-input {
+      padding: 1vh;
+      width: 100%;
+      max-width: 50vw;
+      margin-top: 1vh;
+      min-height: 5vh;
+      border-radius: 1vh;
+      border-color: gray;
+      resize: none;
+    }
+  }
+
   #name-input {
     padding: 1vh;
     margin-top: 1vh;
@@ -103,30 +139,44 @@
     border-color: gray;
     border-width: 1px;
   }
-  .content-input {
-    padding: 1vh;
-    width: 100%;
-    max-width: 50vw;
-    margin-top: 1vh;
-    min-height: 5vh;
-    border-radius: 1vh;
-    border-color: gray;
-    resize: none;
-  }
+
   #submit-btn {
-    margin-top: 1vh;
+    margin-top: 5vh;
     border: transparent;
-    padding: 1vh 2vh;
+    padding: 2vh 4vh;
     border-radius: 1vh;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
       0 2px 4px -1px rgba(0, 0, 0, 0.06);
     cursor: pointer;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
   }
+
   .valid-btn {
     background-color: #e8c599;
   }
 
+  ul {
+    padding: 0;
+  }
   li {
     list-style: none;
+  }
+
+  #comment-area {
+    background-color: #f8f9fa !important;
+    margin-top: 10vh;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+  h4 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0;
   }
 </style>
