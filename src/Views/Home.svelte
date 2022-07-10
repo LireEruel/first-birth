@@ -77,6 +77,8 @@
     margin: 0;
     background-size: cover;
     top: 0;
+    background-position: center;
+    background-repeat: no-repeat;
   }
   .root:focus {
     outline: 0;

@@ -29,6 +29,4 @@
   :global(body) {
     margin: 0;
   }
-  @media (min-width: 480px) {
-  }
 </style>

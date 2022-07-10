@@ -16,7 +16,7 @@
     인스타 영업했어 리현이 빨리 보고싶다 리현쨩 사랑해
   </p>
   <div class="profile-wrap">
-    <img src={profile} alt="귀여운 리현이 사진관 사진" width="500" />
+    <img src={profile} alt="귀여운 리현이 사진관 사진" id="profile-img" />
     <div class="profile-text">
       <h1>신리현 ♂</h1>
       <p>===</p>
@@ -59,10 +59,26 @@
     padding-top: 2%;
     margin-bottom: 3%;
   }
-  .profile-wrap {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+
+  @media screen and (max-width: 500px) {
+    .profile-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+    #profile-img {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 501px) {
+    .profile-wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    #profile-img {
+      width: 30%;
+    }
   }
   .profile-text {
     margin-left: 10%;
