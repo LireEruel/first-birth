@@ -1,5 +1,29 @@
+<script>
+  import naverMap from "../assets/naver-map.png";
+  import kakaoMap from "../assets/kakao-map.png";
+  import googleMap from "../assets/google-map.png";
+  const openNaver = () => {
+    window.open("http://naver.me/xaCH2Mx9");
+  };
+  const openKaKao = () => {
+    window.open("https://place.map.kakao.com/1249473173");
+  };
+  const openGoggle = () => {
+    window.open("https://goo.gl/maps/aXsR3aQ7Xj8Qi14K9");
+  };
+</script>
+
 <div>
   <h2>오시는 길</h2>
+  <a href="http://naver.me/xaCH2Mx9">
+    <img alt="naver-map" class="map-icon" src={naverMap} />
+  </a>
+  <a href="https://place.map.kakao.com/1249473173">
+    <img alt="naver-map" class="map-icon" src={kakaoMap} />
+  </a>
+  <a href="https://goo.gl/maps/aXsR3aQ7Xj8Qi14K9">
+    <img alt="naver-map" class="map-icon" src={googleMap} />
+  </a>
   <div class="map-warrap">
     <div id="map" style="width:500px;height:400px;" />
   </div>
@@ -38,6 +62,11 @@
   .map-warrap {
     display: flex;
     justify-content: center;
+  }
+  .map-icon {
+    width: 48px;
+    height: auto;
+    margin-bottom: 2vh;
   }
   h2 {
     margin-top: 5vh;
