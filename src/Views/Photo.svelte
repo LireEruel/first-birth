@@ -13,130 +13,132 @@
   import photo_11 from "../assets/photo_11.jpg";
 </script>
 
-<div class="root">
-  <div class="title-wrap">
-    <h1 class="title">Photo</h1>
-    <hr />
-  </div>
-
-  <div class="horizontal-scroll-wrapper">
-    <div class="img-wrapper slower">
-      <a
-        href="https://altphotos.com/photo/stylish-parisian-cafe-terrace-279/"
-        target="_blank"
-        rel="noopener"
-        ><img src={photo_0} alt="리현이 0개월때 사진" />
-      </a>
+<div>
+  <div class="root">
+    <div class="title-wrap">
+      <h1 class="title">Photo</h1>
+      <hr />
     </div>
 
-    <div class="img-wrapper faster">
-      <a
-        href="https://altphotos.com/photo/retro-boy-doll-wearing-elegant-clothes-330/"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src={photo_1} alt="리현이 1개월때 사진" />
-      </a>
-    </div>
+    <div class="horizontal-scroll-wrapper">
+      <div class="img-wrapper slower">
+        <a
+          href="https://altphotos.com/photo/stylish-parisian-cafe-terrace-279/"
+          target="_blank"
+          rel="noopener"
+          ><img src={photo_0} alt="리현이 0개월때 사진" />
+        </a>
+      </div>
 
-    <div class="img-wrapper">
-      <a
-        href="https://altphotos.com/photo/cafe-terrace-with-a-row-of-retro-tables-261/"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src={photo_2} alt="리현이 2개월때 사진" />
-      </a>
-    </div>
+      <div class="img-wrapper faster">
+        <a
+          href="https://altphotos.com/photo/retro-boy-doll-wearing-elegant-clothes-330/"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src={photo_1} alt="리현이 1개월때 사진" />
+        </a>
+      </div>
 
-    <div class="img-wrapper">
-      <a
-        href="https://altphotos.com/photo/cafe-terrace-with-a-row-of-retro-tables-261/"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src={photo_3} alt="리현이 3개월때 사진" />
-      </a>
-    </div>
+      <div class="img-wrapper slower2">
+        <a
+          href="https://altphotos.com/photo/cafe-terrace-with-a-row-of-retro-tables-261/"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src={photo_2} alt="리현이 2개월때 사진" />
+        </a>
+      </div>
 
-    <div class="img-wrapper slower vertical">
-      <a
-        href="https://altphotos.com/photo/clocks-shop-exposition-window-reflecting-the-streets-277/"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src={photo_4} alt="리현이 4개월때 사진" />
-      </a>
-    </div>
+      <div class="img-wrapper ">
+        <a
+          href="https://altphotos.com/photo/cafe-terrace-with-a-row-of-retro-tables-261/"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src={photo_3} alt="리현이 3개월때 사진" />
+        </a>
+      </div>
 
-    <div class="img-wrapper slower slower-down">
-      <a
-        href="https://altphotos.com/photo/swans-and-ducks-swimming-in-a-river-264/"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src={photo_5} alt="리현이 5개월때 사진" />
-      </a>
-    </div>
+      <div class="img-wrapper slower vertical">
+        <a
+          href="https://altphotos.com/photo/clocks-shop-exposition-window-reflecting-the-streets-277/"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src={photo_4} alt="리현이 4개월때 사진" />
+        </a>
+      </div>
 
-    <div class="img-wrapper">
-      <a
-        href="https://altphotos.com/photo/sidewalk-terrace-of-a-blue-facade-cafe-312/"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src={photo_6} alt="리현이 6개월때 사진" />
-      </a>
-    </div>
+      <div class="img-wrapper slower slower-down">
+        <a
+          href="https://altphotos.com/photo/swans-and-ducks-swimming-in-a-river-264/"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src={photo_5} alt="리현이 5개월때 사진" />
+        </a>
+      </div>
 
-    <div class="img-wrapper slower">
-      <a
-        href="https://altphotos.com/photo/paris-waterfront-at-sunset-1555/"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src={photo_7} alt="리현이 7개월때 사진" />
-      </a>
-    </div>
+      <div class="img-wrapper">
+        <a
+          href="https://altphotos.com/photo/sidewalk-terrace-of-a-blue-facade-cafe-312/"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src={photo_6} alt="리현이 6개월때 사진" />
+        </a>
+      </div>
 
-    <div class="img-wrapper faster1">
-      <a
-        href="https://altphotos.com/photo/old-man-leaning-over-the-barrier-looking-at-the-river-265/"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src={photo_8} alt="리현이 8개월때 사진" />
-      </a>
-    </div>
+      <div class="img-wrapper slower">
+        <a
+          href="https://altphotos.com/photo/paris-waterfront-at-sunset-1555/"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src={photo_7} alt="리현이 7개월때 사진" />
+        </a>
+      </div>
 
-    <div class="img-wrapper">
-      <a
-        href="https://altphotos.com/photo/street-scene-with-pedestrians-and-dogs-318/"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src={photo_9} alt="리현이 9개월때 사진" />
-      </a>
-    </div>
+      <div class="img-wrapper faster1">
+        <a
+          href="https://altphotos.com/photo/old-man-leaning-over-the-barrier-looking-at-the-river-265/"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src={photo_8} alt="리현이 8개월때 사진" />
+        </a>
+      </div>
 
-    <div class="img-wrapper slower">
-      <a
-        href="https://altphotos.com/photo/tourist-barge-on-the-river-seine-near-notre-dame-266/"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src={photo_10} alt="리현이 10개월때 사진" />
-      </a>
-    </div>
+      <div class="img-wrapper">
+        <a
+          href="https://altphotos.com/photo/street-scene-with-pedestrians-and-dogs-318/"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src={photo_9} alt="리현이 9개월때 사진" />
+        </a>
+      </div>
 
-    <div class="img-wrapper slower last">
-      <a
-        href="https://altphotos.com/photo/skulls-decoration-in-a-shop-window-331/"
-        target="_blank"
-        rel="noopener"
-      >
-        <img src={photo_11} alt="리현이 11개월때 사진" />
-      </a>
+      <div class="img-wrapper slower">
+        <a
+          href="https://altphotos.com/photo/tourist-barge-on-the-river-seine-near-notre-dame-266/"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src={photo_10} alt="리현이 10개월때 사진" />
+        </a>
+      </div>
+
+      <div class="img-wrapper slower last">
+        <a
+          href="https://altphotos.com/photo/skulls-decoration-in-a-shop-window-331/"
+          target="_blank"
+          rel="noopener"
+        >
+          <img src={photo_11} alt="리현이 11개월때 사진" />
+        </a>
+      </div>
     </div>
   </div>
 </div>
@@ -178,8 +180,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vh;
-    transform: rotate(-90deg) translate3d(0, -100vh, 0);
+    width: 80vh;
+    transform: rotate(-90deg) translate3d(0, -80vh, 0);
     transform-origin: right top;
     overflow-y: auto;
     overflow-x: hidden;
@@ -233,18 +235,6 @@
     transform: rotate(90deg) translateZ(-0.2px) scale(1.1) translateX(25vh)
       translateY(-8vh);
   }
-  .scroll-info,
-  header {
-    position: absolute;
-    left: 1rem;
-  }
-
-  header {
-    bottom: 1rem;
-  }
-  .scroll-info {
-    top: 1rem;
-  }
   a {
     color: inherit;
     font-weight: 500;
@@ -270,16 +260,5 @@
   }
   a:hover img {
     filter: none;
-  }
-  p {
-    margin: 0;
-  }
-  .scroll-info {
-    display: flex;
-    align-items: center;
-  }
-  .icon svg {
-    width: 50px;
-    fill: currentcolor;
   }
 </style>
