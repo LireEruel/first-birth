@@ -17,5 +17,5 @@ github 청첩장에서 영감을 받았습니다. (https://github.com/AndersonCh
 3. firebase hosting
 4. 아기가 귀여움
 
-## test
+## 사용해보기
 https://baby-shower-b2c89.web.app/
