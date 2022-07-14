@@ -135,7 +135,7 @@
     transform: rotate(-90deg) translate3d(0, -80vh, 0);
     transform-origin: right top;
     overflow-y: auto;
-    overflow-x: hidden;
+    overflow-x: scroll;
     padding: 0;
     height: 100vw;
     perspective: 1px;

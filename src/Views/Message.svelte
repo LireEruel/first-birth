@@ -10,14 +10,15 @@
   const addComment = () => {
     if (!valid) {
       alert("3글자 이상 입력해주세요");
+    } else {
+      if (name.length < 1) {
+        name = "익명";
+      }
+      comments = comments.concat({ name, content });
+      name = "";
+      content = "";
+      valid = false;
     }
-    if (name.length < 1) {
-      name = "익명";
-    }
-    comments = comments.concat({ name, content });
-    name = "";
-    content = "";
-    valid = false;
   };
 
   const validCheck = () => {

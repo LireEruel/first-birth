@@ -8,13 +8,15 @@
   <source src={intro} type="video/mp4" />
 </video>
 
-<div class="content">
-  <h1>First birth</h1>
+<div class="root">
+  <div class="content">
+    <h1>First birth</h1>
 
-  <div class="button__horizontal">
-    <Link to="home">
-      <button class="button">Hello </button>
-    </Link>
+    <div class="button__horizontal">
+      <Link to="home">
+        <button class="button">Hello </button>
+      </Link>
+    </div>
   </div>
 </div>
 
@@ -23,13 +25,30 @@
     font-family: fortune;
     src: url(../assets/fortune.ttf);
   }
-  #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+  @media screen and (max-width: 500px) {
+    #myVideo {
+      display: none;
+    }
+    .root {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      background-image: url("../assets/intro_mobile.jpg");
+      background-size: 110%;
+    }
   }
+  @media screen and (min-width: 501px) {
+    #myVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+
   .content {
     position: fixed;
     color: #f1f1f1;
