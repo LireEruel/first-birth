@@ -87,7 +87,7 @@
     color: white;
     font-family: amarillo;
     letter-spacing: 0.3rem;
-    padding-top: 5%;
+    padding-top: 10%;
     margin: 0;
     cursor: default;
     font-size: 40px;
