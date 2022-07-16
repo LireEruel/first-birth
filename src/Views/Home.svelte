@@ -8,7 +8,7 @@
 
 <div class="root">
   <div id="top_view" use:scrollRef={"main"}>
-    <h1 class="title">sin ri hyeon birthday</h1>
+    <h1 class="title">Shin Ryan birthday</h1>
   </div>
   <nav class="navigation">
     <a use:scrollTo={{ ref: "main", duration: 1500 }} href="main" class="navi"

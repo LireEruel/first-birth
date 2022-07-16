@@ -3,7 +3,7 @@
 </script>
 
 <div>
-  <h1 class="name">sin li hyeon</h1>
+  <h1 class="name">Shin Ryan</h1>
   <hr />
   <p class="info_text">
     세상에서 제일 귀여운 아가 리현이의 돌잔치에 여러분을 초대합니다! 다들 꼭
