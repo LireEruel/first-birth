@@ -27,6 +27,19 @@
   <div class="map-warrap">
     <div id="map" style="width:500px;height:400px;" />
   </div>
+  <h2>카카오톡으로 공유하기</h2>
+  <a id="create-kakaotalk-sharing-btn" href="javascript:;">
+    <img
+      src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
+      alt="카카오톡 공유 보내기 버튼"
+    />
+  </a>
+  <script type="text/javascript">
+    Kakao.Share.createCustomButton({
+      container: "#create-kakaotalk-sharing-btn",
+      templateId: 79754,
+    });
+  </script>
   <script>
     var container = document.getElementById("map"); //지도를 담을 영역의 DOM 레퍼런스
     var options = {
