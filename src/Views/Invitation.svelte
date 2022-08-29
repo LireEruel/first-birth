@@ -9,7 +9,7 @@
 
   <h1 class="sub-title">리현이의 첫번째 생일에 초대합니다</h1>
   <p class="sub-text">D+367</p>
-  <p class="sub-text">2.5kg이 5kg이 되는데 걸린 시간</p>
+  <p class="sub-text">눈만 뜨던 아기가 걷기까지의 시간</p>
   <div class="card">
     <img src={cafe} alt="카페 이미지" />
     <div class="card-text">

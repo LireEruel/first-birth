@@ -1,20 +1,27 @@
 <script>
+  import { onMount } from "svelte";
+  import { getComments, postComment } from "../api";
   let name = "";
   let content = "";
-  let comments = [
-    { name: "서희", content: "리현이 귀여워어!!" },
-    { name: "선호", content: "리현이 ㄱㅇㅇ" },
-  ];
+  let comments = [];
   let valid = false;
+  onMount(async () => {
+    let res = await getComments();
+    res.splice(0, 5);
+    comments = res.reverse();
+  });
 
-  const addComment = () => {
+  const addComment = async () => {
     if (!valid) {
       alert("3글자 이상 입력해주세요");
     } else {
       if (name.length < 1) {
         name = "익명";
       }
-      comments = comments.concat({ name, content });
+      const param = { name: name, content: content };
+      let newComments = await postComment(param);
+      newComments.splice(0, 5);
+      comments = newComments.reverse();
       name = "";
       content = "";
       valid = false;
@@ -77,6 +84,7 @@
   .root {
     padding-top: 10vh;
   }
+
   .title {
     font-family: Georgia, "Times New Roman", Times, serif;
     font-size: 3rem;
@@ -94,6 +102,7 @@
     flex-direction: column;
     align-items: center;
   }
+
   @media screen and (max-width: 500px) {
     .input-wrap {
       display: flex;
@@ -163,6 +172,7 @@
   }
   li {
     list-style: none;
+    padding: 0 20%;
   }
 
   #comment-area {
