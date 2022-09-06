@@ -3,7 +3,7 @@
 
 ## 사용 기술
 
-svelte, JS
+velte, JS
 
 ## 제작 계기
 
